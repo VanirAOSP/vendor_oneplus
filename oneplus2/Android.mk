@@ -20,12 +20,24 @@ ifeq ($(TARGET_DEVICE),oneplus2)
 ifeq ($(QCPATH),)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := qcrilmsgtunnel
+LOCAL_MODULE := com.qualcomm.location
 LOCAL_MODULE_OWNER := oneplus
-LOCAL_SRC_FILES := proprietary/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+LOCAL_SRC_FILES := proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_CERTIFICATE := platform
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := qcrilmsgtunnel
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES := proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
 LOCAL_CERTIFICATE := platform
 include $(BUILD_PREBUILT)
 
@@ -110,6 +122,20 @@ LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libTimeService
+LOCAL_MODULE_OWNER := oneplus
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libTimeService.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libTimeService.so
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := $(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MULTILIB := both
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libmm-abl
 LOCAL_MODULE_OWNER := oneplus
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libmm-abl.so
@@ -128,4 +154,3 @@ $(shell mkdir -p $(PRODUCT_OUT)/system/vendor/lib64/egl && pushd $(PRODUCT_OUT)/
 
 endif
 endif
-
