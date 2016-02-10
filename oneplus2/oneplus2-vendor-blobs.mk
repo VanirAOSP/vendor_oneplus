@@ -25,7 +25,6 @@ PRODUCT_COPY_FILES += \
         vendor/oneplus/oneplus2/proprietary/bin/mm-qcamera-app:/system/bin/mm-qcamera-app \
         vendor/oneplus/oneplus2/proprietary/bin/mm-qcamera-daemon:/system/bin/mm-qcamera-daemon \
         vendor/oneplus/oneplus2/proprietary/bin/qseecomd:/system/bin/qseecomd \
-        vendor/oneplus/oneplus2/proprietary/bin/qseecom_security_test:/system/bin/qseecom_security_test \
         vendor/oneplus/oneplus2/proprietary/bin/energy-awareness:/system/bin/energy-awareness \
         vendor/oneplus/oneplus2/proprietary/bin/msm_irqbalance:/system/bin/msm_irqbalance \
         vendor/oneplus/oneplus2/proprietary/bin/pm-proxy:/system/bin/pm-proxy \
@@ -334,6 +333,7 @@ PRODUCT_COPY_FILES += \
         vendor/oneplus/oneplus2/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:/system/vendor/lib/libWVStreamControlAPI_L1.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib/libmmQSM.so:/system/vendor/lib/libmmQSM.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib/libconnctrl.so:/system/vendor/lib/libconnctrl.so \
+        vendor/oneplus/oneplus2/proprietary/vendor/lib/liblistensoundmodel2.so:/system/vendor/lib/liblistensoundmodel2.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib64/egl/eglSubDriverAndroid.so:/system/vendor/lib64/egl/eglSubDriverAndroid.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib64/egl/libEGL_adreno.so:/system/vendor/lib64/egl/libEGL_adreno.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so:/system/vendor/lib64/egl/libGLESv1_CM_adreno.so \
@@ -442,4 +442,5 @@ PRODUCT_COPY_FILES += \
         vendor/oneplus/oneplus2/proprietary/vendor/lib64/libOmxWmaDec.so:/system/vendor/lib64/libOmxWmaDec.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib64/libSHIMDivxDrm.so:/system/vendor/lib64/libSHIMDivxDrm.so \
         vendor/oneplus/oneplus2/proprietary/vendor/lib64/libmmQSM.so:/system/vendor/lib64/libmmQSM.so \
-        vendor/oneplus/oneplus2/proprietary/vendor/lib64/libconnctrl.so:/system/vendor/lib64/libconnctrl.so
+        vendor/oneplus/oneplus2/proprietary/vendor/lib64/libconnctrl.so:/system/vendor/lib64/libconnctrl.so \
+        vendor/oneplus/oneplus2/proprietary/vendor/lib64/liblistensoundmodel2.so:/system/vendor/lib64/liblistensoundmodel2.so \
