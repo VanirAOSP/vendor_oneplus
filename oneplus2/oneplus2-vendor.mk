@@ -40,16 +40,21 @@ PRODUCT_PACKAGES += \
     libloc_ds_api
 
 PRODUCT_PACKAGES += \
+    libwpa_qmi_eap_proxy
+
+PRODUCT_PACKAGES += \
     libtime_genoff \
     libdiag \
     libdsutils \
     libmdmdetect \
+    libidl \
     libqcci_legacy \
     libqmi \
+    libqmi_cci \
     libqmi_client_qmux \
     libqmiservices
 
 PRODUCT_PACKAGES += \
-    keystore.msm8994
+    keystore.$(TARGET_BOARD_PLATFORM)
 
 $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor-blobs.mk)
